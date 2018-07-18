@@ -6,7 +6,7 @@ function saveCountry(country){
 	
 	connect.commit();
 	connect.close();
-	if(result && result.EX_ERROR != null){ //!=
+	if(result && result.EX_ERROR !== null){ //!=
 		return {body : result, status : $.net.http.BAD_REQUEST};
 	}else{
 		return {body : output, status : $.net.http.CREATED};
