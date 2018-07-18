@@ -1,0 +1,11 @@
+{
+	"welcomeFile": "index.html",
+	"authenticationMethod": "none",
+	"routes": [{
+		"source": "^/xsodata/euro.xsodata/.*$",
+		"destination": "tiny_js_api_backend"
+	}, {
+		"source": ".*\\.xsjs",
+		"destination": "tiny_js_api_backend"
+	}]
+}

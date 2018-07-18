@@ -1,0 +1,3 @@
+service{
+	"tinyworld.db_tiny::my_calview" as "euro" keys generate local "ID";
+}
