@@ -13,6 +13,7 @@ modules:
     requires:
       - name: hdi_db_tiny
       - name: db_tiny
+      - name: tiny_uaa
     provides:
       - name: tiny_js_api
         properties:
@@ -26,8 +27,14 @@ modules:
         properties:
           name: tiny_js_api_backend
           url: '~{url}'
+          forwardAuthToken: true
+      - name: tiny_uaa
 resources:
   - name: hdi_db_tiny
     properties:
       hdi-container-name: '${service-name}'
     type: com.sap.xs.hdi-container
+  - name: tiny_uaa
+    type: com.sap.xs.uaa
+    parameters:
+      config-path: ./xs-security.json
